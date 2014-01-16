@@ -1,8 +1,8 @@
 require 'sinatra/base'
 
-class . < Sinatra::Base
+class Elteumercat < Sinatra::Base
   get '/' do
-    'Hello .!'
+    'Hello Elteumercat!'
   end
 
   # start the server if ruby file executed directly
