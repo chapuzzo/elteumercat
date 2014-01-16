@@ -5,17 +5,23 @@ ENV['RACK_ENV'] = 'test'
 require File.join(File.dirname(__FILE__), '..', '..', 'lib/elteumercat.rb')
 
 require 'capybara'
+require 'capybara-webkit'
+require 'capybara/dsl'
 require 'capybara/cucumber'
 require 'rspec'
 
 Capybara.app = Elteumercat
+#Capybara.run_server = true
+Capybara.default_driver = :webkit
+Capybara.default_wait_time = 5
+Capybara.javascript_driver = :webkit
 
-class World
+class ElteumercatWorld
   include Capybara::DSL
   include RSpec::Expectations
   include RSpec::Matchers
 end
 
 World do
-  World.new
+  ElteumercatWorld.new
 end

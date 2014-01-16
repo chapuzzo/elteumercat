@@ -5,18 +5,26 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-require File.join(File.dirname(__FILE__), '..', '..', 'lib/elteumercat.rb')
+require File.join(File.dirname(__FILE__), '..', 'lib/elteumercat')
  
 require 'sinatra'
+require 'rspec'
 require 'rack/test'
- 
-set :environment, :test
+require 'capybara'
+require 'capybara/rspec'
+require 'capybara-webkit'
+include Rack::Test::Methods
+
+Capybara.app = Elteumercat 
+
+Capybara.default_driver = :webkit
  
 #specify that the app is a Sinatra app
 def app
-Sinatra::Application
+   Sinatra::Application
 end
 
+set :environment, :test
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
@@ -28,5 +36,5 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = 'random'
-  config.include Rack::Test::Methods
+  config.include Capybara::DSL
 end
