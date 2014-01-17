@@ -10,3 +10,14 @@ desc "Stop server"
   task :serverdown do
     system 'pkill -9 -f rackup'
   end
+
+desc "Launch cucumber"
+    task :cucumber do
+        system 'cucumber'
+    end
+
+require 'rspec/core/rake_task'
+
+RSpec::Core::RakeTask.new(:spec)
+
+task :default => [:spec,:cucumber]
