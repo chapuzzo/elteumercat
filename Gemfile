@@ -3,7 +3,6 @@ ruby '2.0.0'
 
 gem "sinatra"
 gem "thin"
- gem 'rake'
 
 group :development, :test do
  gem 'cucumber'
@@ -11,4 +10,5 @@ group :development, :test do
  gem 'rspec'
  gem 'selenium-webdriver'
  gem 'capybara-webkit'
+ gem 'rake'
 end
