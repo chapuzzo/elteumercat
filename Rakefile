@@ -16,6 +16,7 @@ desc "Launch cucumber"
         system 'cucumber'
     end
 
+require 'rake'
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec)
 
