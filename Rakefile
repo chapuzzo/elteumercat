@@ -16,9 +16,12 @@ desc "Launch cucumber"
         system 'cucumber'
     end
 
-require 'rake'
-require 'rspec'
-require 'rspec/core/rake_task'
-RSpec::Core::RakeTask.new(:spec)
+task :tests => :cucumber
 
-task :tests => [:spec,:cucumber]
+begin
+    require 'rspec/core/rake_task'
+    RSpec::Core::RakeTask.new(:spec)
+    task :tests => [:spec,:cucumber]
+rescue LoadError
+end
+
