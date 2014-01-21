@@ -1,5 +1,5 @@
 require 'spec_helper.rb'
-require_relative '../lib/elteumercat.rb'
+require_relative '../web/elteumercat.rb'
 
 describe 'testing my app' do
   it 'works' do

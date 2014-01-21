@@ -5,7 +5,7 @@
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 
-require File.join(File.dirname(__FILE__), '..', 'lib/elteumercat')
+require File.join(File.dirname(__FILE__), '..', 'web/elteumercat')
  
 require 'sinatra'
 require 'rspec'

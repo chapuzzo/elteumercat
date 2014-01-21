@@ -1,6 +1,6 @@
 Feature: Cucumber enabled
   In order to run acceptanc tests
-  As a develoer
+  As a developer
   I want cucumber enabled
 
 Scenario: Title

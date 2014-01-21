@@ -11,12 +11,7 @@ desc "Stop server"
     system 'pkill -9 -f rackup'
   end
 
-#desc "Launch cucumber"
-#    task :cucumber do
-#        system 'cucumber'
-#    end
-
-#task :tests => :cucumber
+task :tests => :cucumber
 
 begin
   require 'cucumber'
