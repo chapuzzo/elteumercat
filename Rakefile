@@ -11,7 +11,6 @@ desc "Stop server"
     system 'pkill -9 -f rackup'
   end
 
-task :tests => :cucumber
 
 begin
   require 'cucumber'
@@ -28,7 +27,8 @@ end
 begin
     require 'rspec/core/rake_task'
     RSpec::Core::RakeTask.new(:spec)
-    task :tests => [:spec,:cucumber]
+    task :test => [:spec,:cucumber]
 rescue LoadError
 end
 
+task :test => :cucumber
