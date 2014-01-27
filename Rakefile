@@ -3,7 +3,7 @@ require 'rubygems'
 desc "Run server"
 
   task :serverup do
-    system 'rackup -p 3000'
+    system 'rackup -p 3000 &'
   end
 
 desc "Stop server"
