@@ -1,63 +1,71 @@
 <div id="backgrounds" data-backgrounds="assets/back_img_1.jpg,assets/back_img_2.jpg"></div>
-<!--<div id="color-overlay"></div>-->
+<div id="color-overlay"></div>
 
 <div id="main-nav" class="navbar navbar-fixed-top">
-			<div class="container">
-			
-				<div class="navbar-header">
-				
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
-						<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-					</button>
-					
-					<!-- ======= LOGO ========-->
-					<a class="navbar-brand scrollto" href="#home">El teu mercat<span> / prop de tu</span></a>
-					<!-- <a class="navbar-brand scrollto ir-logo" href="#home">SHAPES<span> / Creative Studio</span></a> -->
-				
-				</div>
-				
-				<div id="site-nav" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="sr-only">
-							<a href="#home" class="scrollto">Home</a>
-						</li>
-						<li>
-							<a href="#add_commerce" class="scrollto">añadir comercio</a>
-						</li>
-					</ul>
-				</div><!--End navbar-collapse -->
-				
-			</div><!--End container -->
-			
-		</div><!--End main-nav -->
-
+	<div class="container">
+	
+		<div class="navbar-header">
 		
-
-        <div id="mymap" class="mymap" style="height: 340px; width: 700px">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#site-nav">
+				<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+			</button>
+			
+			<!-- ======= LOGO ========-->
+			<a class="navbar-brand scrollto" href="#home">El teu mercat<span> / prop de tu</span></a>
+			<!-- <a class="navbar-brand scrollto ir-logo" href="#home">SHAPES<span> / Creative Studio</span></a> -->
+		
 		</div>
-		<script type="text/javascript">
-			var map = //L.map('mymap').setView([51.505, -0.09], 12);
-			L.map('mymap', {
-				center: [39.5944, -0.5888],
-				zoom: 13
-			});
-			var marker = L.marker([51.5, -0.09]).addTo(map);
-
-			var polygon = L.polygon([
-			    [51.509, -0.08],
-			    [51.503, -0.06],
-			    [51.51, -0.047]
-			]).addTo(map);
-			var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-			var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png'
-			L.tileLayer(osmUrl, {
-    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
-    maxZoom: 18
-}).addTo(map);
-
-			console.log(L);
-			console.log(map);
-
-		</script>
+		
+		<div id="site-nav" class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="sr-only">
+					<a href="#home" class="scrollto">Home</a>
+				</li>
+				<li>
+					<a href="#add_commerce" class="scrollto">añadir comercio</a>
+				</li>
+			</ul>
+		</div><!--End navbar-collapse -->
+		
+	</div><!--End container -->
+	
+</div><!--End main-nav -->
 
 
+		<section id="dummy_sec" class="padding-bottom bg-light">
+			<div class="container">
+		        <div style="height: 100px; width: 100%">
+				</div>
+			</div>
+		</section>
+
+		<!-- ==============================================
+		ADD_COMMERCE
+		=============================================== -->
+		<section id="add_commerce" class="padding-bottom bg-light">
+
+
+			<div class="container">
+				<input id="commerce_name" type="text" >
+		        <div id="mymap" class="mymap" style="height: 700px; width: 100%">
+				</div>
+				<script type="text/javascript" src="leaflet-admin.js"></script>
+			</div>
+		</section>
+		
+		<!-- ==============================================
+		SCRIPTS
+		=============================================== -->	
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/libs/jquery-1.8.2.min.js">\x3C/script>')</script>
+		
+		<script src="js/libs/bootstrap.min.js"></script>
+		<script src='js/jquery.scrollto.js'></script>
+		<script src='js/jquery.flexslider.min.js'></script>
+		<script src='js/twitterFetcher_v10_min.js'></script>
+		<script src='js/jquery.fitvids.js'></script>
+		<script src='js/jquery.masonry.min.js'></script>
+		<script src="js/waypoints.min.js"></script>
+		<script src="js/jquery.backstretch.min.js"></script>
+		<script src="js/contact.js"></script>
+		<script src="js/shapes.js"></script>
