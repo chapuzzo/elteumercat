@@ -1,6 +1,10 @@
 require 'sinatra/base'
 
 class Elteumercat < Sinatra::Base
+  get '/admin' do
+    erb :admin, :layout => :layout
+  end
+
   get '/' do
     'Hello Elteumercat!'
   end
